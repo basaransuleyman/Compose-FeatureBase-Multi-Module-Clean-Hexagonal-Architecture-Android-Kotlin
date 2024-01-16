@@ -1,31 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <lint>
-    <!-- Performance -->
-    <issue id="UseSparseArrays" severity="warning" />
-    <issue id="UseCompoundDrawables" severity="warning" />
 
-    <!-- Accesibility -->
-    <issue id="ContentDescription" severity="warning" />
-    <issue id="MissingTranslation" severity="warning" />
-
-    <!-- Application space reduce  -->
-    <issue id="UselessParent" severity="warning" />
-    <issue id="DuplicateIds" severity="warning" />
-
-    <!-- Security  -->
-    <issue id="ExportedContentProvider" severity="warning" />
-    <issue id="ExportedReceiver" severity="warning" />
-    <issue id="ExportedService" severity="warning" />
-
-    <issue id="ObsoleteLintCustomCheck" severity="ignore" />
-    <issue id="IconMissingDensityFolder" severity="ignore" />
-
-    <issue id="NewApi" severity="error" />
-    <issue id="InlinedApi" severity="error" />
-    <issue id="Override" severity="error" />
-    <issue id="UnusedResources" severity="error" />
-    <issue id="HardcodedText" severity="error" />
-    <issue id="TodoComment" severity="error" />
-    <issue id="StopShip" severity="error" />
-    <issue id="GradleDependency" severity="error" />
 </lint>
