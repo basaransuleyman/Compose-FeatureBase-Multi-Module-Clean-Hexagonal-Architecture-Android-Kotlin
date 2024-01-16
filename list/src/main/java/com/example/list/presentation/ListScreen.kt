@@ -24,9 +24,7 @@ fun ListScreen() {
     when {
         state.isLoading -> { LoadingComponent() }
         state.error != null -> { ErrorComponent(error = state.error) }
-        else -> state.listData?.let { listData ->
-            ListContent(listData.productList ?: emptyList())
-        }
+        state.listData != null -> ListContent(state.listData!!.productList ?: emptyList())
     }
 
     BackHandler(enabled = true) {
