@@ -15,6 +15,8 @@ This module orchestrates the screen transitions and manages the navigation route
 - **Startup Time:** While @Composable screen functions are only invoked when necessary, the impact on the app's startup time can vary depending on project complexity and screen content it needs to be tried with its project.
 - **Documentation:** Without well-documented argument-passing systems,  may find it challenging to grasp the navigation logic.
 
+| ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/navigation-module.png)  
+
 
 ## Network Module - `network`
 
