@@ -33,7 +33,7 @@ fun SlidableSection(
         SectionTitle(title = sectionTitle)
         LazyRow {
             items(productItems) { product ->
-                ProductCard(product.productImage, product.text, product.subText,
+                HorizontalCard(product.productImage, product.text, product.subText,
                     onClick = { onProductClick(HomeUIEvent.OnProductClicked) })
             }
         }
@@ -41,7 +41,7 @@ fun SlidableSection(
 }
 
 @Composable
-fun ProductCard(
+fun HorizontalCard(
     imageUri: String,
     title: String?,
     subTitle: String?,

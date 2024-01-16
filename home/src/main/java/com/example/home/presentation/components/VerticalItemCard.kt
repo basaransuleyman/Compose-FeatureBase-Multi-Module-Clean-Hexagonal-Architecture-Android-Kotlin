@@ -1,4 +1,4 @@
-package com.example.home.presentation.sections
+package com.example.home.presentation.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -19,23 +19,7 @@ import com.example.core.components.CoilImageComponent
 import com.example.home.domain.model.ProductItem
 
 @Composable
-fun VerticalSection(
-    productItems: List<ProductItem>,
-    sectionTitle: String,
-    onProductClick: (ProductItem) -> Unit
-) {
-    Column {
-        SectionTitle(title = sectionTitle)
-        productItems.forEach { product ->
-            ProductItemCard(
-                product,
-                onProductClick = { onProductClick(product) })
-        }
-    }
-}
-
-@Composable
-fun ProductItemCard(
+fun VerticalItemCard(
     item: ProductItem,
     onProductClick: (ProductItem) -> Unit
 ) {
