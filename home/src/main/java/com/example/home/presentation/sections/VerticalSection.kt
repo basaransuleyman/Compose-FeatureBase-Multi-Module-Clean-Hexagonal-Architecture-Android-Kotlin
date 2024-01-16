@@ -1,5 +1,6 @@
 package com.example.home.presentation.sections
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -18,21 +19,31 @@ import com.example.core.components.CoilImageComponent
 import com.example.home.domain.model.ProductItem
 
 @Composable
-fun VerticalSection(productItems: List<ProductItem>, sectionTitle: String) {
+fun VerticalSection(
+    productItems: List<ProductItem>,
+    sectionTitle: String,
+    onProductClick: (ProductItem) -> Unit
+) {
     Column {
         SectionTitle(title = sectionTitle)
         productItems.forEach { product ->
-            ProductItemCard(product)
+            ProductItemCard(
+                product,
+                onProductClick = { onProductClick(product) })
         }
     }
 }
 
 @Composable
-fun ProductItemCard(item: ProductItem) {
+fun ProductItemCard(
+    item: ProductItem,
+    onProductClick: (ProductItem) -> Unit
+) {
     Card(
         modifier = Modifier
             .padding(8.dp)
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .clickable(onClick = { onProductClick(item) }),
         elevation = CardDefaults.cardElevation(defaultElevation = 5.dp)
     ) {
         Row(

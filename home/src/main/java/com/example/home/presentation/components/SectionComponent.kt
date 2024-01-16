@@ -23,7 +23,10 @@ fun SectionComponent(section: HomeSectionAdapterItem, onEvent: (HomeUIEvent) -> 
 
         is HomeSectionAdapterItem.VerticalProducts -> VerticalSection(
             section.productItem,
-            section.sectionTitle
+            section.sectionTitle,
+            onProductClick = { productItem ->
+                onEvent(HomeUIEvent.OnVerticalProductClicked(productItem))
+            }
         )
     }
 }
