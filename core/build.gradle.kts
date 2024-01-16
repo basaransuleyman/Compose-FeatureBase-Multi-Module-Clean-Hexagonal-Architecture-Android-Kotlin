@@ -2,54 +2,44 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
-    id("kotlin-kapt")
-    id("dagger.hilt.android.plugin")
+    id(libs.plugins.daggerHilt.get().toString())
+    id(libs.plugins.ksp.get().toString())
 }
 
 android {
-    namespace = "com.example.core"
-    compileSdk = 34
+    namespace = libs.plugins.coreNameSpace.get().toString()
+    compileSdk = libs.versions.compileSdk.get().toInt()
 
     defaultConfig {
-        minSdk = 24
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles("consumer-rules.pro")
+        minSdk = libs.versions.minSdk.get().toInt()
     }
 
-    buildTypes {
-        release {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
-        }
-    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = libs.versions.jvmTarget.get()
     }
     buildFeatures {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = libs.versions.kotlinCompilerVersion.get()
     }
 }
 
 dependencies {
-    implementation(libs.okhttp.logging.interceptor)
-    implementation(libs.hilt.core)
+
     implementation(libs.retrofit.core)
-    implementation(libs.retrofit.gson.converter)
 
+    //region D.I Dependencies
     implementation(libs.hilt.core)
-    kapt(libs.hilt.compiler)
+    ksp(libs.hilt.compiler)
+    ksp(libs.hilt.ksp.compiler)
+    //endregion
 
+    //region Presentation Dependencies
     implementation(libs.compose.bom)
     implementation(libs.compose.hilt.navigation)
     implementation(libs.compose.ui.graphics)
@@ -57,4 +47,5 @@ dependencies {
     implementation(libs.compose.ui.material)
     implementation(libs.compose.activity)
     implementation(libs.coil)
+    //endregion
 }

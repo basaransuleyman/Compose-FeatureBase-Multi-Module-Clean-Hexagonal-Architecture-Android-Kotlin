@@ -17,6 +17,9 @@ agp = "8.2.1"
 kotlin = "1.9.0"
 compose-bom = "2023.08.00"
 coil = "2.5.0"
+jvmTarget = "1.8"
+kotlinCompilerVersion = "1.5.1"
+
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
 android-core = { module = "androidx.core:core-ktx", version.ref = "androidCore" }
@@ -28,10 +31,10 @@ retrofit-gson-converter = { module = "com.squareup.retrofit2:converter-gson", ve
 lifecycle-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycleRuntimeKtx" }
 compose-activity = { module = "androidx.activity:activity-compose", version.ref = "composeActivity" }
 compose-hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "composeHiltNav" }
-compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigation"}
+compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
 pager = { module = "com.google.accompanist:accompanist-pager", version.ref = "pager" }
 compose-ui-graphics = { module = "androidx.compose.ui:ui-graphics" }
-coil = {module="io.coil-kt:coil-compose", version.ref = "coil"}
+coil = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
 compose-ui-material = { module = "androidx.compose.material3:material3", version.ref = "composeMaterial" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
 ui = { group = "androidx.compose.ui", name = "ui" }
@@ -39,6 +42,16 @@ ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+hilt-ksp-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+listNameSpace = { id = "com.example.list" }
+networkNameSpace = { id = "com.example.network" }
+detailNameSpace = { id = "com.example.detail" }
+coreNameSpace = { id = "com.example.core" }
+mainNamespace = { id = "com.example.composefeaturebasedmultimodule" }
+navigationNameSpace = { id = "com.example.navigation" }
+homeNameSpace = { id = "com.example.home" }
+daggerHilt = { id = "com.google.dagger.hilt.android" }
+ksp = { id = "com.google.devtools.ksp" }
