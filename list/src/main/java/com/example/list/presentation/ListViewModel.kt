@@ -43,7 +43,6 @@ class ListViewModel @Inject constructor(
         when (event) {
             is ListUIEvent.Dismiss -> handleBack()
             is ListUIEvent.GetList -> getList()
-            else -> Unit
         }
     }
 }

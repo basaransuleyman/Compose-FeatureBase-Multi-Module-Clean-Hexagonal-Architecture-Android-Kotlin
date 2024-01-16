@@ -41,7 +41,6 @@ class DetailViewModel @Inject constructor(
         when (event) {
             is DetailUIEvent.Dismiss -> handleBack()
             is DetailUIEvent.LoadItemDetail -> loadItemDetail()
-            else -> Unit
         }
     }
 

@@ -3,7 +3,6 @@ package com.example.home.data.domainimpl.mapper
 import com.example.home.data.api.model.HomeResponse
 import com.example.home.data.api.model.HomeSection
 import com.example.home.domain.model.BannerItem
-import com.example.home.domain.model.CatalogItem
 import com.example.home.domain.model.HomeSectionAdapterItem
 import com.example.home.domain.model.HomeSections
 import com.example.home.domain.model.ProductItem
