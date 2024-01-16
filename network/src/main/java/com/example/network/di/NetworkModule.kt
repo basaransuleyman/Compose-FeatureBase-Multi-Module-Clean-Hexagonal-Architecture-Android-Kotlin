@@ -3,6 +3,7 @@ package com.example.network.di
 import android.os.Build
 import androidx.annotation.RequiresApi
 import com.example.core.utils.Constants
+import com.example.core.utils.Constants.BASE_URL
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,7 +21,7 @@ internal object NetworkModule {
     @Singleton
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
-        .baseUrl("https://raw.githubusercontent.com")//TODO : Do not forget move to BuildConfig
+        .baseUrl(BASE_URL)//TODO : Do not forget move to BuildConfig
         .addConverterFactory(GsonConverterFactory.create())
         .client(okHttpClient)
         .build()
