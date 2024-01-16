@@ -26,7 +26,6 @@ class ListViewModel @Inject constructor(
                 }
                 .catch { error ->
                     updateUiState { copy(error = error) }
-
                 }
                 .collect { listData ->
                     updateUiState { copy(listData = listData, isLoading = false) }
