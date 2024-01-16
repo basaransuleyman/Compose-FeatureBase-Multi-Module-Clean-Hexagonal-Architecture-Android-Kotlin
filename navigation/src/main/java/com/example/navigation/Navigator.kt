@@ -37,6 +37,6 @@ class Navigator @Inject constructor() {
             val navOptions: NavOptionsBuilder.() -> Unit
         ) : Action()
 
-        object Back : Action()
+        data object Back : Action()
     }
 }

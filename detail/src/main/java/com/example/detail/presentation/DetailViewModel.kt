@@ -18,7 +18,7 @@ class DetailViewModel @Inject constructor(
     private val navigator: Navigator,
 ) : StateAndEventViewModel<DetailUIState, DetailUIEvent>(DetailUIState(null)) {
 
-    fun loadItemDetail() {
+    private fun loadItemDetail() {
         viewModelScope.launch {
             getItemDetail.getDetail()
                 .onStart {

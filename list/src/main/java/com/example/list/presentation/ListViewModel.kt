@@ -18,7 +18,7 @@ class ListViewModel @Inject constructor(
     private val navigator: Navigator
 ) : StateAndEventViewModel<ListUIState, ListUIEvent>(ListUIState(null)) {
 
-    fun getList() {
+    private fun getList() {
         viewModelScope.launch {
             getListUseCase.getList()
                 .onStart {

@@ -52,13 +52,6 @@ fun HomeResponse.mapToHomeSections(): HomeSections {
     return HomeSections(sections = homeSectionsAdapterItems)
 }
 
-private fun mapHomeSectionToCatalogItem(homeSection: HomeSection): CatalogItem {
-    return CatalogItem(
-        icon = homeSection.icon,
-        text = homeSection.text
-    )
-}
-
 
 private fun mapHomeSectionToBannerItem(homeSection: HomeSection): BannerItem {
     return BannerItem(

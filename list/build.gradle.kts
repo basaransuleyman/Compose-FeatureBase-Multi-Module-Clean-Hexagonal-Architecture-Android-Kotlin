@@ -1,4 +1,3 @@
-@Suppress("DSL_SCOPE_VIOLATION") // TODO: Remove once KTIJ-19369 is fixed
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
@@ -50,7 +49,7 @@ dependencies {
     //endregion
 
     //region Presentation Dependencies
-    implementation(libs.compose.bom)
+    implementation(platform(libs.compose.bom))
     implementation(libs.compose.hilt.navigation)
     implementation(libs.compose.navigation)
     implementation(libs.compose.ui.graphics)
