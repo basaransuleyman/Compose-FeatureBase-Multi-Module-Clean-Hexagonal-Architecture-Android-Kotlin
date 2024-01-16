@@ -19,7 +19,6 @@ class HomeViewModel @Inject constructor(
     private val getInitialHomeUseCase: GetInitialHomeUseCase,
     private val navigator: Navigator
 ) : StateAndEventViewModel<HomeUIState, HomeUIEvent>(HomeUIState()) {
-
     override suspend fun handleEvent(event: HomeUIEvent) {
         when (event) {
             HomeUIEvent.LoadInitialHome -> {

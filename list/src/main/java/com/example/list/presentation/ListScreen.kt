@@ -13,7 +13,6 @@ import com.example.list.presentation.event.ListUIEvent
 
 @Composable
 fun ListScreen() {
-
     val viewModel: ListViewModel = hiltViewModel()
     val state by viewModel.uiState.collectAsState()
 
