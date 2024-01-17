@@ -11,6 +11,10 @@ In addition, the project adopts a Hexagonal Architecture ( Domain-Impl (Adapter)
 
 With this opinion,  the domain layer has a sole dependency on domain-impl. Within the data layer, structures like API and persistence are focused solely on their respective operations. The dependency of the domain on the data layer is mitigated through the use of mappers within the domain-impl. These mappers transform data responses into domain entities, thus decoupling the domain logic from the specifics of the data source implementations. This is a strategic design choice that preserves the purity of the domain layer, allowing it to evolve independently of the data layer changes and maintaining the domain model's integrity.
 
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/Hexo.png)
+ 
+**The main rule and our goal is, to isolate the core of the application (domain logic or business logic) from other factors, Hexagonal Architecture and Clean Architecture are just tools for us, we are trying to use the places that are suitable for us here by taking advantage of both.**
+
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/HomeModule.png)
 
 # Module Descriptions
