@@ -2,16 +2,15 @@
 
 
 ## Feature Module - `home`
-
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/Home.png)
+ 
  Each feature module is divided into data, domain and presentation layers. The data layer is further divided into API, DomainImpl and Persistence. The main reason for this distinction is the principle of single responsibility and the management of the resource from a single point. For example, while the API module is only responsible for communicating with remote services, with domainimpl we prevent the dependency of the domain layer on the API layer. 
  This structure shows how an Android application can be developed in a sustainable and scalable way, inspired by architectural principles such as Clean Architecture and Hexagonal Architecture ( Like Adapter is domain-impl and port is domain) .
-
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/Home.png)
-
 
 
 ## Navigation Module - `navigation`
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/navigation-module.png)
+
 This module orchestrates the screen transitions and manages the navigation routes within the app. The Navigator class is equipped with functions that facilitate navigation to different screens, while AppNavigation is responsible for setting up the navigation routes. Crucially, the Navigation module operates independently of other modules, which plays a key role in decoupling feature modules from one another. This means that individual features do not have direct knowledge of each other, and all inter-feature navigation is coordinated through the Navigation module. 
 
 ### Navigation Flow:
