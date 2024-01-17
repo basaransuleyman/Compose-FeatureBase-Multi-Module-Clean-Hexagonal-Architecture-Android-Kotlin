@@ -54,7 +54,7 @@ This module orchestrates the screen transitions and manages the navigation route
 
 ### Screen Adding Mechanism:
 
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/newcomposepage.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/AppNavigation.png)
 
 
  ## Network Module - `network`
