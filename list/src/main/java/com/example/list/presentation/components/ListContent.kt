@@ -5,10 +5,9 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -21,10 +20,10 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.example.core.components.CoilImageComponent
 import com.example.list.domain.model.ListProductsModel
@@ -52,8 +51,10 @@ fun ListContent(productList: List<ListProductsModel>) {
 fun ProductCard(product: ListProductsModel) {
     Card(
         modifier = Modifier
-            .padding(8.dp)
-            .fillMaxWidth(),
+            .padding(4.dp)
+            .fillMaxWidth()
+            .height(250.dp),
+        shape = RoundedCornerShape(10.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
     ) {
         Column(
@@ -61,30 +62,33 @@ fun ProductCard(product: ListProductsModel) {
                 .padding(16.dp)
                 .fillMaxWidth()
         ) {
-            Box(
+            CoilImageComponent(
+                imageUrl = product.productImage,
+                contentDescription = "Product Image",
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(200.dp),
-                contentAlignment = Alignment.TopCenter
+                    .height(100.dp)
+                    .clip(RoundedCornerShape(10.dp)),
+                contentScale = ContentScale.Fit
+            )
+            Column(
+                modifier = Modifier
+                    .padding(8.dp)
+                    .fillMaxWidth()
             ) {
-                CoilImageComponent(
-                    imageUrl = product.productImage,
-                    contentDescription = "List Image",
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .clip(RoundedCornerShape(8.dp)),
-                    contentScale = ContentScale.Crop
-                )
                 Text(
                     text = product.text,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.padding(top = 8.dp)
+                    style = MaterialTheme.typography.titleLarge,
+                    modifier = Modifier.padding(bottom = 4.dp),
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
                 )
                 Text(
                     text = product.subText,
-                    style = MaterialTheme.typography.bodyMedium,
-                    modifier = Modifier.padding(top = 4.dp)
+                    style = MaterialTheme.typography.titleMedium,
+                    color = MaterialTheme.colorScheme.secondary
                 )
+                Spacer(modifier = Modifier.height(8.dp))
             }
         }
     }
