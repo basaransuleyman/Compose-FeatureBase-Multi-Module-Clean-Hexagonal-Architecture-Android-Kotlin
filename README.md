@@ -7,6 +7,15 @@
  Each feature module is divided into data, domain and presentation layers. The data layer is further divided into API, DomainImpl and Persistence. The main reason for this distinction is the principle of single responsibility and the management of the resource from a single point. For example, while the API module is only responsible for communicating with remote services, with domainimpl we prevent the dependency of the domain layer on the API layer. 
  This structure shows how an Android application can be developed in a sustainable and scalable way, inspired by architectural principles such as Clean Architecture and Hexagonal Architecture ( Like Adapter is domain-impl and port is domain) .
 
+ 
+### Advantages:
+- **Single-Stop Management of Resources:** Managing data and functions from a central point provides consistency and order within the system.
+- **Independence Between Layers:** Thanks to the independence between layers, it is possible to develop each module on its own without being affected by changes.
+- **Modularity:** Since the system has a modular structure, it is easier to integrate new features or changes.
+- **Testability:** The independence of each layer makes testing processes more efficient and focused.
+Disadvantages:
+- **Configuration Complexity:** The multitude of layers and modules.
+- **Dependency Management:** Maintaining the independence of each module can become difficult as the project grows.
 
 ## Navigation Module - `navigation`
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/navigation-module.png)
