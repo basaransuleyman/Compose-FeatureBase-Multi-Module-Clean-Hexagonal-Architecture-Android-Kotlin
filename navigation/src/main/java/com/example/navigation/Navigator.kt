@@ -20,10 +20,7 @@ class Navigator @Inject constructor() {
 
     fun navigate(destination: DestinationRoute, navOptions: NavOptionsBuilder.() -> Unit = {}) {
         _actions.tryEmit(
-            Action.Navigate(destination = destination) {
-                launchSingleTop = true
-                restoreState = true
-            }
+            Action.Navigate(destination = destination, navOptions = navOptions)
         )
     }
 
