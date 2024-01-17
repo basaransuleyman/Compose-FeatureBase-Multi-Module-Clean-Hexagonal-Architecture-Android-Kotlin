@@ -1,4 +1,4 @@
-# Module Descriptions
+# Project Descriptions
 
 ## Why and What is aim?
 
@@ -10,7 +10,9 @@ The aim of this project is to demonstrate a feature-based modularization by mana
 In addition, the project adopts a Hexagonal Architecture with Clean Architecture approach between the domain and data layers. By establishing domain implementation (domain-impl) as the adapter that connects to the domain port, the project leverages certain aspects of various architectural patterns without being strictly bound to any single one. This hybrid approach allows the application to benefit from the strengths of different architectures while maintaining the flexibility to adapt to specific project needs.
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/FeatureFlow.png)
- 
+
+## Module Descriptions
+
 ## Feature Module - `home`
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/Home.png)
  
