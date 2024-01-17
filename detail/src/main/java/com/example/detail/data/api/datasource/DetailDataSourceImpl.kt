@@ -1,6 +1,6 @@
 package com.example.detail.data.api.datasource
 
-import com.example.core.extensions.handleCall
+import com.example.network.extensions.handleCall
 import com.example.detail.data.api.DetailApi
 import com.example.detail.data.api.model.ItemDetailResponse
 import javax.inject.Inject

@@ -39,6 +39,7 @@ android {
 
 dependencies {
     implementation(project(":core"))
+    implementation(project(":network"))
     implementation(project(":navigation"))
 
     //region Data Dependencies

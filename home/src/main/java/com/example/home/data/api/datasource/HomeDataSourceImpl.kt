@@ -1,6 +1,6 @@
 package com.example.home.data.api.datasource
 
-import com.example.core.extensions.handleCall
+import com.example.network.extensions.handleCall
 import com.example.home.data.api.HomeApi
 import com.example.home.data.api.model.HomeResponse
 import javax.inject.Inject

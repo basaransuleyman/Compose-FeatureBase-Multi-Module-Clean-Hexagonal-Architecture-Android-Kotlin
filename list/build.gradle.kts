@@ -39,6 +39,7 @@ android {
 dependencies {
     implementation(project(":core"))
     implementation(project(":navigation"))
+    implementation(project(":network"))
 
     implementation(libs.retrofit.core)
 
