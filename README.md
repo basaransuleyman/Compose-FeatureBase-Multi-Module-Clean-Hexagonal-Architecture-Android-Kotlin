@@ -13,7 +13,8 @@
 - **Independence Between Layers:** Thanks to the independence between layers, it is possible to develop each module on its own without being affected by changes.
 - **Modularity:** Since the system has a modular structure, it is easier to integrate new features or changes.
 - **Testability:** The independence of each layer makes testing processes more efficient and focused.
-Disadvantages:
+
+### Disadvantages:
 - **Configuration Complexity:** The multitude of layers and modules.
 - **Dependency Management:** Maintaining the independence of each module can become difficult as the project grows.
 
