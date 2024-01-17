@@ -13,7 +13,7 @@ In addition, the project adopts a Hexagonal Architecture with a Clean Architectu
 
 ### Dependencies Flow
 
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/dependencies%20flow.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/dependenciesflows.png)
 
 ## Module Descriptions
 
