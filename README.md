@@ -1,13 +1,15 @@
 # Project Descriptions
 
-## Why and What is the aim?
+# Why and What is the aim?
 
 This project aims to demonstrate a feature-based modularization by managing the inter-feature dependencies through a dedicated navigation module. By utilizing a navigation module, the project seeks to eliminate the dependencies between features, ensuring that each feature remains self-contained and unaware of the others. This approach not only reinforces the principles of modularity but also showcases how Jetpack Compose can be effectively used to manage and orchestrate the user interface in a modular architecture.
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/AppFlow.png)
 
-## Architecture Opinion
+# Architecture Opinion
 
 In addition, the project adopts a Hexagonal Architecture with a Clean Architecture approach between the domain and data layers. By establishing domain implementation (domain-impl) as the adapter that connects to the domain port, the project leverages certain aspects of various architectural patterns without being strictly bound to any single one. This hybrid approach allows the application to benefit from the strengths of different architectures while maintaining the flexibility to adapt to specific project needs.
+
+With this opinion,  the domain layer has a sole dependency on domain-impl. Within the data layer, structures like API and persistence are focused solely on their respective operations. The dependency of the domain on the data layer is mitigated through the use of mappers within the domain-impl. These mappers transform data responses into domain entities, thus decoupling the domain logic from the specifics of the data source implementations. This is a strategic design choice that preserves the purity of the domain layer, allowing it to evolve independently of the data layer changes and maintaining the domain model's integrity.
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/HomeModule.png)
 
