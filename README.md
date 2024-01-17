@@ -1,23 +1,28 @@
-# Project Descriptions
+<img width="649" alt="dependencies flow" src="https://github.com/basaransuleyman/Compose-FeatureBase-Multi-Module-Clean-Architecture-Android-Kotlin/assets/44279036/b165f826-2180-4e00-8a02-8e97ef908998"># Project Descriptions
 
-## Why and What is aim?
+## Why and What is the aim?
 
-The aim of this project is to demonstrate a feature-based modularization by managing the inter-feature dependencies through a dedicated navigation module. By utilizing a navigation module, the project seeks to eliminate the dependencies between features, ensuring that each feature remains self-contained and unaware of the others. This approach not only reinforces the principles of modularity but also showcases how Jetpack Compose can be effectively used to manage and orchestrate the user interface in a modular architecture.
+This project aims to demonstrate a feature-based modularization by managing the inter-feature dependencies through a dedicated navigation module. By utilizing a navigation module, the project seeks to eliminate the dependencies between features, ensuring that each feature remains self-contained and unaware of the others. This approach not only reinforces the principles of modularity but also showcases how Jetpack Compose can be effectively used to manage and orchestrate the user interface in a modular architecture.
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/AppFlow.png)
 
 ## Architecture Opinion
 
-In addition, the project adopts a Hexagonal Architecture with Clean Architecture approach between the domain and data layers. By establishing domain implementation (domain-impl) as the adapter that connects to the domain port, the project leverages certain aspects of various architectural patterns without being strictly bound to any single one. This hybrid approach allows the application to benefit from the strengths of different architectures while maintaining the flexibility to adapt to specific project needs.
+In addition, the project adopts a Hexagonal Architecture with a Clean Architecture approach between the domain and data layers. By establishing domain implementation (domain-impl) as the adapter that connects to the domain port, the project leverages certain aspects of various architectural patterns without being strictly bound to any single one. This hybrid approach allows the application to benefit from the strengths of different architectures while maintaining the flexibility to adapt to specific project needs.
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/HomeModule.png)
+
+### Dependencies Flow
+
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/dependencies%20flow.png)
 
 ## Module Descriptions
 
 ## Feature Module - `home`
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/Home.png)
  
- Each feature module is divided into data, domain and presentation layers. The data layer is further divided into API, DomainImpl and Persistence. The main reason for this distinction is the principle of single responsibility and the management of the resource from a single point. For example, while the API module is only responsible for communicating with remote services, with domainimpl we prevent the dependency of the domain layer on the API layer. 
- This structure shows how an Android application can be developed in a sustainable and scalable way, inspired by architectural principles such as Clean Architecture and Hexagonal Architecture ( Like Adapter is domain-impl and port is domain) .
+ Each feature module is divided into data, domain, and presentation layers. The data layer is further divided into API, DomainImpl and Persistence. The main reason for this distinction is the principle of single responsibility and the management of the resource from a single point. For example, while the API module is only responsible for communicating with remote services, with domainimpl we prevent the dependency of the domain layer on the API layer. 
+ This structure shows how an Android application can be developed in a sustainable and scalable way, inspired by architectural principles such as Clean Architecture and Hexagonal Architecture ( Like Adapter is domain-impl and port is domain).
+
 
  
 ### Advantages:
