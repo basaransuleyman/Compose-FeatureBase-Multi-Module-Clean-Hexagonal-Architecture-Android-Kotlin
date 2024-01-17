@@ -15,8 +15,6 @@ With this opinion,  the domain layer has a sole dependency on domain-impl. Withi
  
 **The main rule and our goal is, to isolate the core of the application (domain logic or business logic) from other factors, Hexagonal Architecture and Clean Architecture are just tools for us, we are trying to use the places that are suitable for us here by taking advantage of both.**
 
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/HomeModule.png)
-
 # Module Descriptions
 
 ## Feature Module - `home`
