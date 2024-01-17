@@ -65,3 +65,11 @@ The Network Module is a critical component of the architecture, encompassing all
 
 - **Modular Overhead:** An extensive number of modules can introduce complexity in the build configuration and may lead to longer build times.
 - **Dependency Management:** Ensuring that the Network Module remains fully decoupled requires meticulous management of dependencies, which can be challenging as the project grows.
+
+### App Screens:
+
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/homepage.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/homepage.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/homepage.png)
+
+ 
