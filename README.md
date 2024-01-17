@@ -73,7 +73,7 @@ The Network Module is a critical component of the architecture, encompassing all
 ### App Screens:
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/dynamichome.png)
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/detailhome.png)
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/listpage.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/detailhomes.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/listpages.png)
 
  
