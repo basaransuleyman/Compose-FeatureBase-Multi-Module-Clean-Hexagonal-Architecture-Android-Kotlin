@@ -2,7 +2,7 @@
 
 # Why and What is the aim?
 
-This project aims to demonstrate a feature-based modularization by managing the inter-feature dependencies through a dedicated navigation module. By utilizing a navigation module, the project seeks to eliminate the dependencies between features, ensuring that each feature remains self-contained and unaware of the others. This approach not only reinforces the principles of modularity but also showcases how Jetpack Compose can be effectively used to manage and orchestrate the user interface in a modular architecture.
+This project aims to demonstrate a feature-based modularization by managing the inter-feature dependencies through a dedicated navigation module and draws inspiration from Hexagonal Architecture and Clean Architecture to isolate the core of the application (domain logic or business logic) from other factors, allowing for a more flexible and decoupled system design.   
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/AppFlowCurrent.png)
 
 # Architecture Opinion
