@@ -27,9 +27,15 @@ This module orchestrates the screen transitions and manages the navigation route
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/AddNewScreen.png)
 
- 
 
-## Network Module - `network`
+## Home Module - `home`
+
+ Each feature module is divided into data, domain and presentation layers. The data layer is further divided into API, DomainImpl and Persistence. The main reason for this distinction is the principle of single responsibility and the management of the resource from a single point. For example, while the API module is only responsible for communicating with remote services, with domainimpl we prevent the dependency of the domain layer on the API layer. 
+ This structure shows how an Android application can be developed in a sustainable and scalable way, inspired by architectural principles such as Clean Architecture and Hexagonal Architecture ( Like Adapter is domain-impl and port is domain) .
+
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/Home.png)
+
+ ## Network Module - `network`
 
 The Network Module is a critical component of the architecture, encompassing all aspects of networking logic. It is crafted to function independently, sourcing its constants from the core module while remaining detached from other modules.
 
