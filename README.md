@@ -1,4 +1,4 @@
-<img width="649" alt="dependencies flow" src="https://github.com/basaransuleyman/Compose-FeatureBase-Multi-Module-Clean-Architecture-Android-Kotlin/assets/44279036/b165f826-2180-4e00-8a02-8e97ef908998"># Project Descriptions
+# Project Descriptions
 
 ## Why and What is the aim?
 
