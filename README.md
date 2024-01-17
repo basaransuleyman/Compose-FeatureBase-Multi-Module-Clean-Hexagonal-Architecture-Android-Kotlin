@@ -13,11 +13,7 @@ With this opinion,  the domain layer has a sole dependency on domain-impl. Withi
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/HomeModule.png)
 
-### Dependencies Flow
-
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/dependenciesflows.png)
-
-## Module Descriptions
+# Module Descriptions
 
 ## Feature Module - `home`
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/Home.png)
@@ -26,7 +22,6 @@ With this opinion,  the domain layer has a sole dependency on domain-impl. Withi
  This structure shows how an Android application can be developed in a sustainable and scalable way, inspired by architectural principles such as Clean Architecture and Hexagonal Architecture ( Like Adapter is domain-impl and port is domain).
 
 
- 
 ### Advantages:
 - **Single-Stop Management of Resources:** Managing data and functions from a central point provides consistency and order within the system.
 - **Independence Between Layers:** Thanks to the independence between layers, it is possible to develop each module on its own without being affected by changes.
@@ -76,6 +71,10 @@ The Network Module is a critical component of the architecture, encompassing all
 
 - **Modular Overhead:** An extensive number of modules can introduce complexity in the build configuration and may lead to longer build times.
 - **Dependency Management:** Ensuring that the Network Module remains fully decoupled requires meticulous management of dependencies, which can be challenging as the project grows.
+
+### Dependencies Flow
+
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/dependenciesflows.png)
 
 ### App Screens:
 
