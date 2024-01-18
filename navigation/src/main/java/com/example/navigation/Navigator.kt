@@ -2,6 +2,7 @@ package com.example.navigation
 
 import androidx.compose.runtime.Stable
 import androidx.navigation.NavOptionsBuilder
+import com.example.core.navigation.NavigationService
 import com.example.navigation.utils.DestinationRoute
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
@@ -9,22 +10,23 @@ import kotlinx.coroutines.flow.asSharedFlow
 import javax.inject.Inject
 import javax.inject.Singleton
 
-@Stable
 @Singleton
-class Navigator @Inject constructor() {
+class Navigator @Inject constructor() : NavigationService {
     private val _actions = MutableSharedFlow<Action>(
         replay = 0,
         extraBufferCapacity = 10
     )
     val actions: Flow<Action> = _actions.asSharedFlow()
-
-    fun navigate(destination: DestinationRoute, navOptions: NavOptionsBuilder.() -> Unit = {}) {
+    override fun navigateTo(
+        destination: DestinationRoute,
+        navOptions: NavOptionsBuilder.() -> Unit
+    ) {
         _actions.tryEmit(
             Action.Navigate(destination = destination, navOptions = navOptions)
         )
     }
 
-    fun back() {
+    override fun goBack() {
         _actions.tryEmit(Action.Back)
     }
 
@@ -36,4 +38,5 @@ class Navigator @Inject constructor() {
 
         data object Back : Action()
     }
+
 }

@@ -40,7 +40,6 @@ android {
 dependencies {
     implementation(project(":core"))
     implementation(project(":network"))
-    implementation(project(":navigation"))
 
     //region Data Dependencies
     implementation(libs.okhttp.logging.interceptor)

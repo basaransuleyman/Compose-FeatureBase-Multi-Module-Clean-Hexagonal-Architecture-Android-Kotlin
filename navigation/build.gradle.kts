@@ -29,6 +29,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":core"))
     //region D.I
     implementation(libs.hilt.core)
     ksp(libs.hilt.compiler)

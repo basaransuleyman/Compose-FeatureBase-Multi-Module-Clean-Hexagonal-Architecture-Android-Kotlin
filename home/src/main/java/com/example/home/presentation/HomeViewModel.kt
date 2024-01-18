@@ -1,13 +1,12 @@
 package com.example.home.presentation
 
 import androidx.lifecycle.viewModelScope
+import com.example.core.navigation.NavigationService
 import com.example.core.presentation.StateAndEventViewModel
 import com.example.home.domain.model.ProductItem
 import com.example.home.domain.usecase.GetInitialHomeUseCase
 import com.example.home.presentation.state.HomeUIState
 import com.example.home.presentation.uievent.HomeUIEvent
-import com.example.navigation.Destination
-import com.example.navigation.Navigator
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.onStart
@@ -17,7 +16,7 @@ import javax.inject.Inject
 @HiltViewModel
 class HomeViewModel @Inject constructor(
     private val getInitialHomeUseCase: GetInitialHomeUseCase,
-    private val navigator: Navigator
+    private val navigator: NavigationService
 ) : StateAndEventViewModel<HomeUIState, HomeUIEvent>(HomeUIState()) {
     override suspend fun handleEvent(event: HomeUIEvent) {
         when (event) {
@@ -30,7 +29,7 @@ class HomeViewModel @Inject constructor(
             }
 
             is HomeUIEvent.OnProductClicked -> {
-                onProductClicked(true)
+                //onProductClicked(true)
             }
 
             is HomeUIEvent.OnVerticalProductClicked -> {
@@ -66,14 +65,7 @@ class HomeViewModel @Inject constructor(
     }
 
     private fun onBannerClicked() {
-        navigator.navigate(Destination.list.destination(Unit))
-    }
-
-    private fun onProductClicked(isSheetOpen: Boolean) {
-        navigator.navigate(Destination.detail.destination(isSheetOpen)) {
-            launchSingleTop = true
-            restoreState = true
-        }
+        navigator.navigateTo("list")
     }
 
     private fun onVerticalProductClicked(productItem: ProductItem) {
@@ -83,7 +75,7 @@ class HomeViewModel @Inject constructor(
     }
 
     private fun handleBack() {
-        navigator.back()
+        navigator.goBack()
     }
 
 }

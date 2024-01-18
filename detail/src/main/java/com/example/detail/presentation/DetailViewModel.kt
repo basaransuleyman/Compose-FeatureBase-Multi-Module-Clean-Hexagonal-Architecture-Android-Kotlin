@@ -34,7 +34,7 @@ class DetailViewModel @Inject constructor(
     }
 
     private fun handleBack() {
-        navigator.back()
+        navigator.goBack()
     }
 
     override suspend fun handleEvent(event: DetailUIEvent) {

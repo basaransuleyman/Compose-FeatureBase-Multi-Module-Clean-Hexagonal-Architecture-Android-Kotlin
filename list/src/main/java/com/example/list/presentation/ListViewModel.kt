@@ -35,7 +35,7 @@ class ListViewModel @Inject constructor(
     }
 
     private fun handleBack() {
-        navigator.back()
+        navigator.goBack()
     }
 
     override suspend fun handleEvent(event: ListUIEvent) {
