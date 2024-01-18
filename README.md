@@ -3,7 +3,7 @@
 # Why and What is the aim?
 
 This project aims to demonstrate a feature-based modularization by managing the inter-feature dependencies through a dedicated navigation module and draws inspiration from Hexagonal Architecture and Clean Architecture to isolate the core of the application (domain logic or business logic) from other factors, allowing for a more flexible and decoupled system design.   
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/AppFlowCurrent.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/correctAppFlow.png)
 
 # Architecture Opinion
 
@@ -40,7 +40,7 @@ With this opinion,  the domain layer has a sole dependency on domain-impl. Withi
 This module orchestrates the screen transitions and manages the navigation routes within the app. The Navigator class is equipped with functions that facilitate navigation to different screens, while AppNavigation is responsible for setting up the navigation routes. Crucially, the Navigation module operates independently of other modules, which plays a key role in decoupling feature modules from one another. This means that individual features do not have direct knowledge of each other, and all inter-feature navigation is coordinated through the Navigation module. 
 
 ### Navigation Flow:
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/NavigationfLow.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/currentNavFlow.png)
 
 ### Advantages:
 
@@ -78,7 +78,7 @@ The Network Module is a critical component of the architecture, encompassing all
 
 ### Dependencies Flow
 
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/dependenciesflows.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/correctDependencies.png)
 
 ### App Screens:
 
