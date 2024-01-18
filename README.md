@@ -3,7 +3,7 @@
 # Why and What is the aim?
 
 This project aims to demonstrate a feature-based modularization by managing the inter-feature dependencies through a dedicated navigation module and draws inspiration from Hexagonal Architecture and Clean Architecture to isolate the core of the application (domain logic or business logic) from other factors, allowing for a more flexible and decoupled system design.   
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/correctAppFlow.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/modifierAppFlow.png)
 
 # Architecture Opinion
 
