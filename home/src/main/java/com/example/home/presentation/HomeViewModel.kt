@@ -29,7 +29,7 @@ class HomeViewModel @Inject constructor(
             }
 
             is HomeUIEvent.OnProductClicked -> {
-                //onProductClicked(true)
+                onProductClicked(true)
             }
 
             is HomeUIEvent.OnVerticalProductClicked -> {
@@ -71,6 +71,13 @@ class HomeViewModel @Inject constructor(
     private fun onVerticalProductClicked(productItem: ProductItem) {
         updateUiState {
             copy(selectedProductItem = productItem, isLoading = false)
+        }
+    }
+
+    private fun onProductClicked(isSheetOpen: Boolean) {
+        navigator.navigateTo( "detail/$isSheetOpen") {
+            launchSingleTop = true
+            restoreState = true
         }
     }
 

@@ -29,7 +29,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.retrofit.core)
 
     //region D.I Dependencies
