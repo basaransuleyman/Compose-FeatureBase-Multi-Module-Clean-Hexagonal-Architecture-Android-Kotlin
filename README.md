@@ -40,7 +40,7 @@ With this opinion,  the domain layer has a sole dependency on domain-impl. Withi
 This module orchestrates the screen transitions and manages the navigation routes within the app. The Navigator class is equipped with functions that facilitate navigation to different screens, while AppNavigation is responsible for setting up the navigation routes. Crucially, the Navigation module operates independently of other modules, which plays a key role in decoupling feature modules from one another. This means that individual features do not have direct knowledge of each other, and all inter-feature navigation is coordinated through the Navigation module. 
 
 ### Navigation Flow:
-![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/currentNavFlow.png)
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/navflow.png)
 
 ### Advantages:
 
