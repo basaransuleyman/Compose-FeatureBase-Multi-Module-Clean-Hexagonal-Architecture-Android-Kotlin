@@ -1,11 +1,11 @@
 package com.example.detail.presentation
 
 import androidx.lifecycle.viewModelScope
+import com.example.core.navigation.NavigationService
 import com.example.core.presentation.StateAndEventViewModel
 import com.example.detail.domain.usecase.GetItemDetailUseCase
 import com.example.detail.presentation.state.DetailUIState
 import com.example.detail.presentation.uievent.DetailUIEvent
-import com.example.navigation.Navigator
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.onStart
@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class DetailViewModel @Inject constructor(
     private val getItemDetail: GetItemDetailUseCase,
-    private val navigator: Navigator,
+    private val navigator: NavigationService,
 ) : StateAndEventViewModel<DetailUIState, DetailUIEvent>(DetailUIState(null)) {
 
     private fun loadItemDetail() {

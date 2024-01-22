@@ -1,11 +1,11 @@
 package com.example.list.presentation
 
 import androidx.lifecycle.viewModelScope
+import com.example.core.navigation.NavigationService
 import com.example.core.presentation.StateAndEventViewModel
 import com.example.list.domain.usecase.GetListUseCase
 import com.example.list.presentation.event.ListUIEvent
 import com.example.list.presentation.state.ListUIState
-import com.example.navigation.Navigator
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.onStart
@@ -15,7 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class ListViewModel @Inject constructor(
     private val getListUseCase: GetListUseCase,
-    private val navigator: Navigator
+    private val navigator: NavigationService
 ) : StateAndEventViewModel<ListUIState, ListUIEvent>(ListUIState(null)) {
 
     private fun getList() {
