@@ -47,4 +47,12 @@ dependencies {
     implementation(libs.compose.activity)
     implementation(libs.coil)
     //endregion
+
+    //region test
+    testImplementation(libs.junit)
+    testImplementation(libs.mockito)
+    testImplementation(libs.mockito.core)
+    testImplementation(libs.android.test)
+    testImplementation(libs.coroutines.test)
+    //endregion
 }

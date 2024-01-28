@@ -19,6 +19,11 @@ compose-bom = "2023.08.00"
 coil = "2.5.0"
 jvmTarget = "1.8"
 kotlinCompilerVersion = "1.5.1"
+mockito = "5.10.0"
+android-test = "1.6.0-alpha04"
+junit = "4.13.2"
+mockito-kotlin = "3.2.0"
+coroutinesCore = "1.7.3"
 
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -43,6 +48,12 @@ ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview
 ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 hilt-ksp-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockito" }
+mockito = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockito-kotlin" }
+android-test = { module = "androidx.test:core", version.ref = "android-test" }
+junit = { module = "junit:junit", version.ref = "junit" }
+coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesCore" }
+
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
