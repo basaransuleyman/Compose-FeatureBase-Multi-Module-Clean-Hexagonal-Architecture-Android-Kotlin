@@ -80,6 +80,10 @@ The Network Module is a critical component of the architecture, encompassing all
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/correctDependencies.png)
 
+### E2E Unit Test - Detail Module 
+
+![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/detaile2etest.png)
+
 ### App Screens:
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/dynamichome.png)
