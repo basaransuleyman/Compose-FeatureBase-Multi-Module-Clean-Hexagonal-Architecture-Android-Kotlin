@@ -6,6 +6,7 @@ import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 
 abstract class StateAndEventViewModel<UiState, Event>(initialState: UiState) : ViewModel() {
@@ -25,7 +26,7 @@ abstract class StateAndEventViewModel<UiState, Event>(initialState: UiState) : V
     protected abstract suspend fun handleEvent(event: Event)
 
     protected fun updateUiState(update: UiState.() -> UiState) {
-        _uiState.value = _uiState.value.update()
+        _uiState.update { _uiState.value.update() }
     }
 
     fun onEvent(event: Event) {

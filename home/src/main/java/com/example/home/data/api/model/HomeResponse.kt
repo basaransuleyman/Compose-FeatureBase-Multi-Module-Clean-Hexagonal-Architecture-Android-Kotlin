@@ -11,14 +11,15 @@ data class Section(
     @SerializedName("sectionData")
     val sectionData: List<HomeSection>,
     val sectionTitle: String? = null,
-    val type: Int
+    val type: Int,
+    val id: Int
 )
 
 data class HomeSection(
     val icon: String? = null,
     val image: String,
-    val navigationData: String? = null,
-    val productId: String? = null,
+    val navigationData: String = "ND_49581L",
+    val productId: String = "PI_845481EI",
     val productImage: String,
     val questions: String? = null,
     val rating: String? = null,

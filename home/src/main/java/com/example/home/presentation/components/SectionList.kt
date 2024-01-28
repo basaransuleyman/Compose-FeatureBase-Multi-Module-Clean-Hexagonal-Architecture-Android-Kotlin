@@ -13,7 +13,15 @@ import com.example.home.presentation.uievent.HomeUIEvent
 fun SectionList(sections: List<HomeSectionAdapterItem>?, onEvent: (HomeUIEvent) -> Unit) {
     sections?.let {
         LazyColumn {
-            items(sections) { section ->
+            items(items = sections, key = { section ->
+                when (section) {
+                    is HomeSectionAdapterItem.Banner -> {
+                        "Banner-" + section.bannerItem.joinToString("-") { it.navigationData }
+                    }
+                    is HomeSectionAdapterItem.SlidableProducts -> "Slidable-${section.id}"
+                    is HomeSectionAdapterItem.VerticalProducts -> "Vertical-${section.sectionTitle}"
+                }
+            }) { section ->
                 when (section) {
                     is HomeSectionAdapterItem.Banner -> BannerSection(
                         section.bannerItem,
@@ -32,7 +40,8 @@ fun SectionList(sections: List<HomeSectionAdapterItem>?, onEvent: (HomeUIEvent) 
                             VerticalItemCard(
                                 productItem,
                                 onProductClick = {
-                                    onEvent(HomeUIEvent.OnVerticalProductClicked(productItem)
+                                    onEvent(
+                                        HomeUIEvent.OnVerticalProductClicked(productItem)
                                     )
                                 }
                             )

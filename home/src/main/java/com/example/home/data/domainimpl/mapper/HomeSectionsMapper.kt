@@ -23,7 +23,8 @@ fun HomeResponse.mapToHomeSections(): HomeSections {
                 viewType = viewType,
                 bannerItem = section.sectionData.map { banner ->
                     mapHomeSectionToBannerItem(banner)
-                }
+                },
+                id = section.id
             )
 
             HomeSectionAdapterItem.VIEW_TYPE_SLIDABLE_PRODUCTS -> HomeSectionAdapterItem.SlidableProducts(
@@ -31,7 +32,8 @@ fun HomeResponse.mapToHomeSections(): HomeSections {
                 productItem = section.sectionData.map { product ->
                     mapToProductItem(product)
                 },
-                sectionTitle = section.sectionTitle ?: ""
+                sectionTitle = section.sectionTitle ?: "",
+                id = section.id
             )
 
             HomeSectionAdapterItem.VIEW_TYPE_VERTICAL_PRODUCTS -> HomeSectionAdapterItem.VerticalProducts(
@@ -39,7 +41,8 @@ fun HomeResponse.mapToHomeSections(): HomeSections {
                 productItem = section.sectionData.map { product ->
                     mapToProductItem(product)
                 },
-                sectionTitle = section.sectionTitle ?: ""
+                sectionTitle = section.sectionTitle ?: "",
+                id = section.type
             )
 
             else -> null

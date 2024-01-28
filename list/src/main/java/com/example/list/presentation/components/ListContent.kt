@@ -40,7 +40,9 @@ fun ListContent(productList: List<ListProductsModel>) {
             contentPadding = PaddingValues(all = 8.dp),
             modifier = Modifier.padding(8.dp)
         ) {
-            items(productList) { product ->
+            items(items = productList, key = { product ->
+                product.productId
+            }) {product ->
                 ProductCard(product)
             }
         }

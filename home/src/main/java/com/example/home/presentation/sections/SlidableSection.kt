@@ -32,8 +32,13 @@ fun SlidableSection(
     Column {
         SectionTitle(title = sectionTitle)
         LazyRow {
-            items(productItems) { product ->
-                HorizontalCard(product.productImage, product.text, product.subText,
+            items(items = productItems, key = { product ->
+               product.productId
+            }) { product ->
+                HorizontalCard(
+                    product.productImage,
+                    product.text,
+                    product.subText,
                     onClick = { onProductClick(HomeUIEvent.OnProductClicked) })
             }
         }
