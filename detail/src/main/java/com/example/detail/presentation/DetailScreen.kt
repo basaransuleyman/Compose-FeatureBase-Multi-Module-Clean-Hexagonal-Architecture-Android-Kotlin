@@ -22,6 +22,9 @@ fun DetailScreen() {
     when {
         state.isLoading -> { LoadingComponent() }
         state.error != null -> { ErrorComponent(error = state.error) }
-        state.itemData != null -> { DetailContent(state.itemData!!) }
+        state.itemData != null -> { DetailContent(
+            state.itemData!!,
+            onSearchClicked = { viewModel.onEvent(DetailUIEvent.SearchDetailClick) }
+        ) }
     }
 }

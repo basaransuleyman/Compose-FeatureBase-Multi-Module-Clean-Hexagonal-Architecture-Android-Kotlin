@@ -5,6 +5,8 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.navigation.graph.DetailScreens
+import com.example.navigation.graph.detailGraph
 import com.example.navigation.screens.Detail
 import kotlinx.coroutines.flow.collectLatest
 
@@ -13,7 +15,8 @@ fun AppNavigation(
     navigator: Navigator,
     homeScreen: @Composable () -> Unit,
     listScreen: @Composable () -> Unit,
-    detailScreen: @Composable (Boolean) -> Unit
+    detailScreen: @Composable (Boolean) -> Unit,
+    detailScreenWithGraph: DetailScreens
 ) {
     val navController = rememberNavController()
 
@@ -30,6 +33,7 @@ fun AppNavigation(
     }
 
     NavHost(navController, startDestination = Destination.home.route) {
+        detailGraph(detailScreenWithGraph)
         composable(Destination.home.route) {
             homeScreen()
         }

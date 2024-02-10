@@ -37,10 +37,15 @@ class DetailViewModel @Inject constructor(
         navigator.goBack()
     }
 
+    private fun handleSearchDetailClick() {
+        navigator.navigateTo("detail/search")
+    }
+
     override suspend fun handleEvent(event: DetailUIEvent) {
         when (event) {
             is DetailUIEvent.Dismiss -> handleBack()
             is DetailUIEvent.LoadItemDetail -> loadItemDetail()
+            is DetailUIEvent.SearchDetailClick -> handleSearchDetailClick()
         }
     }
 

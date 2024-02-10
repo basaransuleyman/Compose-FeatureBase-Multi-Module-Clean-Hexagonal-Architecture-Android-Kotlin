@@ -29,7 +29,7 @@ class HomeViewModel @Inject constructor(
             }
 
             is HomeUIEvent.OnProductClicked -> {
-                onProductClicked(true)
+                onProductClicked()
             }
 
             is HomeUIEvent.OnVerticalProductClicked -> {
@@ -74,12 +74,23 @@ class HomeViewModel @Inject constructor(
         }
     }
 
-    private fun onProductClicked(isSheetOpen: Boolean) {
-        navigator.navigateTo( "detail/$isSheetOpen") {
+    /* Route with arguments
+      private fun onProductClicked(isSheetOpen: Boolean) {
+          navigator.navigateTo( "detail/$isSheetOpen") {
+              launchSingleTop = true
+              restoreState = true
+          }
+      }
+       */
+
+    // Route with Detail Graph
+    private fun onProductClicked() {
+        navigator.navigateTo("detailgraph") {
             launchSingleTop = true
             restoreState = true
         }
     }
+
 
     private fun handleBack() {
         navigator.goBack()
