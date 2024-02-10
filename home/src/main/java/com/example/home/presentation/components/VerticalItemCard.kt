@@ -11,6 +11,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
@@ -23,11 +24,26 @@ fun VerticalItemCard(
     item: ProductItem,
     onProductClick: (ProductItem) -> Unit
 ) {
-    Card(
-        modifier = Modifier
+    val cardModifier = remember {
+        Modifier
             .padding(8.dp)
             .fillMaxWidth()
-            .clickable(onClick = { onProductClick(item) }),
+            .clickable(onClick = { onProductClick(item) })
+    }
+
+    val imageModifier = remember {
+        Modifier
+            .size(88.dp)
+    }
+
+    val textModifier = remember {
+        Modifier
+            .padding(vertical = 12.dp)
+            .fillMaxWidth()
+    }
+
+    Card(
+        modifier = cardModifier,
         elevation = CardDefaults.cardElevation(defaultElevation = 5.dp)
     ) {
         Row(
@@ -36,7 +52,7 @@ fun VerticalItemCard(
             CoilImageComponent(
                 imageUrl = item.productImage,
                 contentDescription = "Vertical Image",
-                modifier = Modifier.size(88.dp)
+                modifier = imageModifier
             )
             Column(
                 modifier = Modifier
@@ -47,9 +63,7 @@ fun VerticalItemCard(
                     Text(
                         text = it,
                         style = MaterialTheme.typography.bodyMedium,
-                        modifier = Modifier
-                            .padding(vertical = 12.dp)
-                            .fillMaxWidth(),
+                        modifier = textModifier,
                         textAlign = TextAlign.Center
                     )
                 }
@@ -63,7 +77,5 @@ fun VerticalItemCard(
                 }
             }
         }
-
-
     }
 }

@@ -13,6 +13,7 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -52,37 +53,42 @@ fun HorizontalCard(
     subTitle: String?,
     onClick: () -> Unit
 ) {
-    Card(
-        modifier = Modifier
+    val cardModifier = remember {
+        Modifier
             .padding(horizontal = 8.dp, vertical = 16.dp)
             .fillMaxWidth()
             .height(200.dp)
-            .clickable(onClick = onClick),
+            .clickable(onClick = onClick)
+    }
+    Card(
+        modifier = cardModifier,
         elevation = CardDefaults.cardElevation(defaultElevation = 5.dp),
-        shape = RoundedCornerShape(10.dp),
+        shape = RoundedCornerShape(10.dp)
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.padding(8.dp)
         ) {
             CoilImageComponent(
-                imageUri, contentDescription = "Slidable Image", modifier = Modifier
+                imageUri,
+                contentDescription = "Slidable Image",
+                modifier = Modifier
                     .size(100.dp)
                     .padding(8.dp)
                     .align(Alignment.CenterHorizontally)
             )
 
-            if (title != null) {
+            title?.let {
                 Text(
-                    text = title,
+                    text = it,
                     fontWeight = FontWeight.Bold,
                     textAlign = TextAlign.Left,
                     modifier = Modifier.align(Alignment.Start)
                 )
             }
-            if (subTitle != null) {
+            subTitle?.let {
                 Text(
-                    text = subTitle,
+                    text = it,
                     color = Color.Gray,
                     textAlign = TextAlign.Left,
                     modifier = Modifier.align(Alignment.Start)
