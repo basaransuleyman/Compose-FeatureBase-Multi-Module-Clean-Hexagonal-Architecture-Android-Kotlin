@@ -15,7 +15,7 @@ fun DetailScreen() {
     val viewModel: DetailViewModel = hiltViewModel()
     val state by viewModel.uiState.collectAsState()
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(true) {
         viewModel.onEvent(DetailUIEvent.LoadItemDetail)
     }
 

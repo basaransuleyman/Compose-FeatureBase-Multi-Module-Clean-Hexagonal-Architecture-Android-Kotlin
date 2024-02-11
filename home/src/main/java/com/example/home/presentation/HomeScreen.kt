@@ -28,7 +28,7 @@ fun HomeScreen() {
     var showBottomSheet by remember { mutableStateOf(false) }
     val sheetState = rememberModalBottomSheetState()
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(true) {
         viewModel.onEvent(HomeUIEvent.LoadInitialHome)
     }
 

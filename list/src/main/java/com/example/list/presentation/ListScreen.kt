@@ -16,7 +16,7 @@ fun ListScreen() {
     val viewModel: ListViewModel = hiltViewModel()
     val state by viewModel.uiState.collectAsState()
 
-    LaunchedEffect(Unit) {
+    LaunchedEffect(true) {
         viewModel.onEvent(ListUIEvent.GetList)
     }
 
