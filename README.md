@@ -84,7 +84,7 @@ The Network Module is a critical component of the architecture, encompassing all
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/detaile2etest.png)
 
-### App Screens:
+## App Screens:
 
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/dynamichome.png)
 ![1](https://github.com/basaransuleyman/suleyman-basaranoglu-json/blob/main/detailhomes.png)
