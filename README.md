@@ -63,7 +63,7 @@ This module orchestrates the screen transitions and manages the navigation route
 
  ## Network Module - `network`
 
-The Network Module is a critical component of the architecture, encompassing all aspects of networking logic. It is crafted to function independently, sourcing its constants from the core module while remaining detached from other modules.
+The Network Module is a critical component of the architecture, encompassing all aspects of networking logic. It's crafted to function independently, sourcing its constants from the core module while remaining detached from other modules.
 
 ### Advantages :
 
